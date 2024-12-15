@@ -1,7 +1,7 @@
-<script setup lang="ts"></script>
-
 <template>
-  <div class="he">dsfsdf</div>
+  <main>
+    <div class="hell">sdfsdfs</div>
+  </main>
 </template>
 
-<style scoped></style>
+<script setup lang="ts"></script>
