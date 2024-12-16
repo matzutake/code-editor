@@ -1,7 +1,13 @@
 <template>
-  <main>
-    <div class="hell">sdfsdfs</div>
-  </main>
+  <div>
+
+  </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+</script>
+
+<style scoped>
+
+</style>

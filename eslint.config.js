@@ -1,34 +1,21 @@
-import vue from 'eslint-plugin-vue'
-import prettier from 'eslint-plugin-prettier'
-import typescriptParser from '@typescript-eslint/parser'
-import typescriptPlugin from '@typescript-eslint/eslint-plugin'
+import pluginVue from 'eslint-plugin-vue'
+import vueTsEslintConfig from '@vue/eslint-config-typescript'
+import oxlint from 'eslint-plugin-oxlint'
+import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
 
 export default [
   {
-    files: ['**/*.{js,ts,vue}'],
-    ignores: ['node_modules', 'dist'],
-    languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: false
-        }
-      }
-    },
+    name: 'app/files-to-lint',
+    files: ['**/*.{ts,mts,tsx,vue}'],
+  },
 
-    plugins: {
-      vue,
-      prettier,
-      '@typescript-eslint': typescriptPlugin
-    },
-    rules: {
-      'prettier/prettier': 'error',
-      'no-console': 'warn',
-      'no-debugger': 'warn',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      'vue/multi-word-component-names': 'off'
-    }
-  }
+  {
+    name: 'app/files-to-ignore',
+    ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
+  },
+
+  ...pluginVue.configs['flat/essential'],
+  ...vueTsEslintConfig(),
+  oxlint.configs['flat/recommended'],
+  skipFormatting,
 ]
