@@ -1,5 +1,5 @@
-import '@/styles/main.scss'
 import '@csstools/normalize.css'
+import '@/styles/main.scss'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
