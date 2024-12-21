@@ -1,9 +1,9 @@
 <template>
   <div class="layout">
-    <top-bar class="top-bar" />
-    <code-editor class="code-editor" />
-    <console-output class="console-output" />
-    <about-block class="about-block" />
+    <top-bar />
+    <code-editor />
+    <console-output />
+    <about-block />
   </div>
 </template>
 
@@ -22,14 +22,14 @@ import AboutBlock from '@/components/AboutBlock.vue'
   width: 100%;
   height: 100%;
   display: grid;
-  overflow: hidden;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 4rem 1fr 18rem;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
     'top-bar top-bar top-bar'
     'code-editor code-editor about-block'
     'console-output console-output about-block';
-  gap: 1rem;
+  background-color: #121212;
   padding: 1rem;
+  gap: 1rem;
 }
 </style>
