@@ -2,6 +2,7 @@
   <div class="code-editor">
     <vue-monaco-editor
       v-model:value="code"
+      :language="language"
       theme="vs-dark"
       :options="MONACO_EDITOR_OPTIONS"
       @mount="handleMount"
@@ -17,11 +18,16 @@ const MONACO_EDITOR_OPTIONS = {
   automaticLayout: true,
   formatOnType: true,
   formatOnPaste: true,
+  fontSize: 18,
+  minimap: {
+    enabled: false,
+  },
 }
 
 const code = ref('// some code...')
 const editorRef = shallowRef()
-const handleMount = (editor) => (editorRef.value = editor)
+const language = ref('python')
+const handleMount = (editor: unknown) => (editorRef.value = editor)
 </script>
 
 <style scoped>
@@ -30,5 +36,6 @@ const handleMount = (editor) => (editorRef.value = editor)
   border-radius: 1rem;
   overflow: hidden;
   background-color: #1e1e1e;
+  font-size: 2rem;
 }
 </style>

@@ -22,7 +22,7 @@ import AboutBlock from '@/components/AboutBlock.vue'
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 4rem 1fr 18rem;
+  grid-template-rows: 4rem 1fr 30rem;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
     'top-bar top-bar top-bar'
