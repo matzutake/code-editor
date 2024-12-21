@@ -1,5 +1,15 @@
 <template>
-  <div class="top-bar">Top Bar</div>
+  <header class="top-bar">
+    <span>Reset</span>
+    <select>
+      <option>File</option>
+      <option>File</option>
+      <option>File</option>
+    </select>
+
+    <span>Run</span>
+    <span>Debug</span>
+  </header>
 </template>
 
 <script setup lang="ts"></script>
